@@ -133,6 +133,10 @@ def get_id():
     return id
 
 
+# This function will loop through the current todos and change their IDs and re-order them. Then it will clear the db and repopulate it with the new todos.
+# def refresh_ids():
+
+
 # This handles the deletion of a specific todo item within my database
 # After deletion, we will need to re-id each of the todos so the numbers don't skip.
 # This is my next thing to do
@@ -141,7 +145,7 @@ def delete_todo(del_command):
     todos.delete_one({"id": id})
     clear()
     print('Todo item deleted...')
-    # order_todos() - NEED TO ADD THIS FUNCTIONALITY SOON
+    # refresh_ids() - NEED TO ADD THIS FUNCTIONALITY SOON
     prompt_screen()
 
 
